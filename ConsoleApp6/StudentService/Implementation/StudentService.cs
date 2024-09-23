@@ -10,7 +10,7 @@ namespace ConsoleApp6.StudentService.Implementation
     public class StudentService : IStudent
     {
         // A dictionary to store student data where the key is the student's ID (string) and the value is a Student object.
-        public Dictionary<string, Student> studentData = new Dictionary<string, Student>();
+        private Dictionary<string, Student> studentData = new Dictionary<string, Student>();
 
         // Add Student 
         public void AddStudent(string studentId, Student student)
