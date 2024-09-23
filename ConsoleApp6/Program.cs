@@ -17,6 +17,10 @@ public class Program
             // Display all student details
             studentService.DisplayAllStudents();
         }
+        catch (ArgumentOutOfRangeException ex)
+        {
+            Console.WriteLine($"ArgumentOutOfRangeException: {ex.Message}");
+        }
         catch (ArgumentException ex)
         {
             Console.WriteLine($"ArgumentException: {ex.Message}");

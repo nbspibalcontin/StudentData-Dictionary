@@ -52,7 +52,7 @@ namespace ConsoleApp6.StudentService.Implementation
         {
             if (student == null)
             {
-                throw new ArgumentNullException(nameof(student), "Student object cannot be null.");
+                throw new ArgumentException(nameof(student), "Student object cannot be null.");
             }
 
             if (string.IsNullOrWhiteSpace(student.Name))
