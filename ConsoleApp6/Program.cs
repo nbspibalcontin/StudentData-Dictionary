@@ -8,11 +8,22 @@ public class Program
 
     public static void Main(string[] args)
     {
-        // Add Student Details
-        studentService.AddStudent("A001", new Student("Alice", 85));
-        studentService.AddStudent("B002", new Student("Bob", 92));
+        try
+        {
+            // Add Student Details
+            studentService.AddStudent("A002", new Student("Alice", 85));
+            studentService.AddStudent("A001", new Student("Bob", 92));
 
-        // Display all student details
-        studentService.DisplayAllStudents();
+            // Display all student details
+            studentService.DisplayAllStudents();
+        }
+        catch (ArgumentException ex)
+        {
+            Console.WriteLine($"ArgumentException: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
     }
 }
